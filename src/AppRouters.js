@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import Navbar from "./pages/Navbar";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProfilePage from "./pages/ProfilePage";
+import CounterRedux from "./components/counter/CounterRedux";
+import UsersRedux from "./components/users/UsersRedux";
 
 export default function AppRouters() {
 
@@ -16,6 +18,8 @@ export default function AppRouters() {
                 <Route exact path="/profile/:username/:genero" component={ProfilePage}/>
                 <Route exact path="/categories" component={CategoriesPage}/>
                 <Route exact path="/" component={HomePage}/>
+                <Route exact path="/counter" component={CounterRedux }/>
+                <Route exact path="/users" component={UsersRedux }/>
                 <Route path="*">
                     <NotFoundPage/>
                 </Route>
