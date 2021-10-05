@@ -7,6 +7,8 @@ import NotFoundComponent from "./NotFoundPage";
 import { addAll } from '../../redux/actions/articulos/actions'
 import DetallearticulosComponent from "./DetalleArticulos";
 import Carritocomponent from "./CarritoComponent";
+import MensajeriaComponent from "./Mensajeria";
+import CheckoutComponent from "./CheckoutComponent";
 
 export default function AppRouters() {
 
@@ -32,11 +34,13 @@ export default function AppRouters() {
     return (
         <BrowserRouter>
             <Navbar />
+            <MensajeriaComponent/>
             <div className="container">
                 <Switch>
                     <Route exact path="/" component={ArticulosComponent}/>
                     <Route exact path="/articulo/detalle/:id" component={DetallearticulosComponent}/>
                     <Route exact path="/carrito" component={Carritocomponent}/>
+                    <Route exact path="/checkout" component={CheckoutComponent}/>
                     <Route path="*" component={NotFoundComponent}/>
                 </Switch>
             </div>

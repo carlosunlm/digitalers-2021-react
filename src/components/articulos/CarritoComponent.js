@@ -1,12 +1,14 @@
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
+import { CarritoItemRow } from "./CarritoItemRow";
+import { CarritoTotal } from "./CarritoTotal";
 
 export default function Carritocomponent(props) {
     const carritoReducer = useSelector(
         (state) => state.carrito
     )
 
-    const carritoVacio = () => {
+    const dibujarCarritoVacio = () => {
         return (
             <div className="row mt-5">
                 <div className="col-12">
@@ -26,8 +28,9 @@ export default function Carritocomponent(props) {
         )
     }
 
-    const items = () => {
+    const dibujarCarrito = () => {
         return (
+            <>
             <div className="table-responsive">
                 <table className="table table-striped">
                     <thead>
@@ -41,52 +44,39 @@ export default function Carritocomponent(props) {
                     </thead>
                     <tbody>
                         {
-                            carritoReducer.items.map(item => { 
-                                return (
-                                    <tr>	                            		
-                                        <td>
-                                            <img src="https://dummyimage.com/50x50/55595c/fff"/> 
-                                        </td>
-                                        <td>
-                                            {item.titulo}
-                                        </td>
-                                        <td>
-                                            <input id="CANTIDAD_9" className="form-control" type="text" value="1"/>
-                                        </td>
-                                        <td className="text-right">
-                                            {item.precio}
-                                        </td>
-                                        <td className="text-right">
-                                            <button id="9" className="btn btn-sm btn-primary btnActualizar">
-                                                <i className="bi bi-arrow-clockwise"></i> 
-                                            </button>
-                                            <button id="9" className="btn btn-sm btn-danger btnEliminar">
-                                                <i className="bi bi-trash"></i> 
-                                            </button>
-                                        </td>
-                                    </tr>
-                                )
+                            carritoReducer.items.map((item,index) => {                                 
+                                return <CarritoItemRow key={index} item={item}></CarritoItemRow>
                             })
                         } 
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><strong>Total</strong></td>
-                            <td className="text-right">
-                                <strong>2500.0</strong>
-                            </td>
+                            <CarritoTotal/>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <div className="row text-center">
+                <div className="col-6">
+                    <Link to="/" className="btn btn-block btn-secondary text-uppercase" tabIndex="0">
+                        Continue Shopping
+                    </Link>
+                </div>
+                <div className="col-6">
+                    <Link to="/checkout" className="btn btn-block btn-success text-uppercase" tabIndex="1">
+                        Checkout
+                    </Link>
+                </div>
+            </div>
+            </>
         )
     }
     return (
         <>
+        <div className="row">
+            <h3>Carrito de compras</h3>
             {                
-                carritoReducer.items.length === 0 ? carritoVacio() : items()
-            }        
+                carritoReducer.items.length === 0 ? dibujarCarritoVacio() : dibujarCarrito()
+            }
+        </div>
         </>
     )
 }

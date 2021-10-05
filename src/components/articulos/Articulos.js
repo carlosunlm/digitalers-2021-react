@@ -23,7 +23,6 @@ export default function ArticulosComponent(props) {
                         </div>
                         <Footer></Footer>
                     </div>
-
                 </div>
             </div>
         </>

@@ -1,7 +1,7 @@
 export const types = {
-    ARTICULO_ADD: '@carrito/add',
-    ARTICULO_REMOVE: '@carrito/remove',
-    ARTICULO_EDIT: '@carrito/edit',
-    ARTICULO_UPDATE: '@carrito/update'
+    ADD: '@carrito/add',
+    REMOVE: '@carrito/remove',
+    EDIT: '@carrito/edit',
+    UPDATE: '@carrito/update'
 }
 

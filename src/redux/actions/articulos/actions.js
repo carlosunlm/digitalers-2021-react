@@ -5,9 +5,19 @@ export const addAll = {
     payload: []
 }
 
-export const add = {
+export const add = (params) => ({
     type: types.ARTICULO_ADD,
-    payload: {}
+    payload: params    
+})
+
+
+export const udpate2 = (params) => ({
+    type: types.ARTICULO_ADD,
+    payload: params    
+})
+
+export function add2(params) {
+    add(params)
 }
 
 export const remove = {

@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import AppRouters from "./AppRouters";
+import AppRouters from "./components/articulos/AppRouters";
 import estadoGlobal from "./redux/store/store";
 
 function App() {

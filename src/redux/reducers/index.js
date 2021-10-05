@@ -5,12 +5,14 @@ import counterReducer from "./counter/reducer";
 import userReducer from "./users/reducers";
 import articuloReducer from "./articulos/articuloReducer";
 import carritoReducer from "./carrito/reducer";
+import mensajeReducer from "./mensaje/reducer";
 
 export default combineReducers(
     {
         contador: counterReducer,
         users: userReducer,
         articulos: articuloReducer,
-        carrito: carritoReducer
+        carrito: carritoReducer,
+        mensaje: mensajeReducer
     }
 );

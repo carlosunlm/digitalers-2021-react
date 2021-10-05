@@ -1,21 +1,21 @@
 import { types } from "../../types/carrito/types"
 
-export const add = {
-    type: types.ARTICULO_ADD,
+export const CARRITO_ADD = {
+    type: types.ADD,
     payload: {}
 }
 
-export const remove = {
-    type: types.ARTICULO_REMOVE,
+export const CARRITO_REMOVE = {
+    type: types.REMOVE,
     payload: {}
 }
 
-export const edit = {
-    type: types.ARTICULO_EDIT,
+export const CARRITO_EDIT = {
+    type: types.EDIT,
     payload: {}
 }
 
-export const update = {
-    type: types.ARTICULO_UPDATE,
+export const CARRITO_UPDATE = {
+    type: types.UPDATE,
     payload: {}
 }
