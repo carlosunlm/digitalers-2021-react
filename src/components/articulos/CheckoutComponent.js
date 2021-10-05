@@ -7,7 +7,7 @@ export const CheckoutComponent = () => {
         (state) => state.carrito
     )
 
-	const [pais, setPais] = useState(1);
+	const [pais, setPais] = useState("");
 	const [direccion,setDireccion] = useState('');
 	const [nombre,setNombre] = useState('');
 	const [apellido,setApellido] = useState('');

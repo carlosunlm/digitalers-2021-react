@@ -9,13 +9,15 @@ export const articuloReducer = (state = {articulos:[]}, action) => {
         case types.ARTICULO_ADD:
             res.articulos = res.articulos.concat(action.payload);
             break;
-        /*case types.ARTICULO_REMOVE:
-            state.filter(x => x.id !== )
-            newArts.concat(state);
-            break;
-        */
-       default :
-       res = state;
+        case types.ARTICULO_SEARCH:
+            const articulosFiltrados = res.articulos.filter(articulo=> articulo.titulo.toLowerCase().includes(action.payload.toLowerCase()));
+            res.articulos = articulosFiltrados;
+            break;  
+        case types.ARTICULO_REMOVE:
+            res.articulos = [];
+            break;  
+        default :
+            res = state;
         break;
     }
 

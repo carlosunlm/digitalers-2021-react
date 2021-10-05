@@ -34,3 +34,8 @@ export const update = {
     type: types.ARTICULO_UPDATE,
     payload: {}
 }
+
+export const search = {
+    type: types.ARTICULO_SEARCH,
+    payload: {}
+}

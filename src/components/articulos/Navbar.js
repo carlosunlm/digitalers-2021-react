@@ -1,10 +1,33 @@
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
+import { addAll, remove, search } from '../../redux/actions/articulos/actions'
+
 
 export default function NavbarComponent() {
 
-    const submitHandler = () => {
-        console.log('');
-    } 
+    const [clave,setClave] = useState('');
+
+    const dispath = useDispatch();
+
+    const buscar = () => {
+        if(clave !=='') {
+            const articuloSearch = search;          
+            articuloSearch.payload = clave;            
+            dispath(articuloSearch);
+        }else {
+            dispath(remove)
+
+            fetch(`articulos.json`)
+            .then(
+                (response) => response.json()
+            ).then((data) => {
+                const newAdd = addAll;
+                newAdd.payload = data
+                dispath(addAll)
+            });
+        }
+    }
 
     return (
         <>      
@@ -31,11 +54,14 @@ export default function NavbarComponent() {
                                 </Link>
                             </li>
                         </ul>
-                        <form className="d-flex" method="post" onSubmit={() =>submitHandler}>
-                            <input type="hidden" name="tipoBusqueda" value="CLAVE"/>
-                            <input name="claveBusqueda" className="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"/>
-                            <button className="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
-                        </form>		
+                        <div className="d-flex">
+                            <input className="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"
+                                value={clave}
+                                onChange={e => setClave(e.target.value)}/>
+                            <button className="btn btn-secondary my-2 my-sm-0" type="button" onClick={() => buscar()}>
+                                Buscar
+                            </button>
+                        </div>		
                     </div>
                 </div>
             </nav>       
