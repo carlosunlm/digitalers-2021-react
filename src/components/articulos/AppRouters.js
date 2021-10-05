@@ -21,7 +21,7 @@ export default function AppRouters() {
     }, []);
 
     const findArticulos = async () => {
-        await fetch(`http://localhost:3000/articulos.json`)
+        await fetch(`articulos.json`)
         .then(
             (response) => response.json()
         ).then((data) => {
