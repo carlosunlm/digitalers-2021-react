@@ -17,7 +17,7 @@ export const articuloReducer = (state = {articulos:[]}, action) => {
             res.articulos = [];
             break;  
         default :
-            res = state;
+            res.articulos = state.articulos;
         break;
     }
 

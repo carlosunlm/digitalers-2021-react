@@ -10,8 +10,8 @@ export const CARRITO_REMOVE = {
     payload: {}
 }
 
-export const CARRITO_EDIT = {
-    type: types.EDIT,
+export const CARRITO_REMOVE_ALL = {
+    type: types.REMOVE_ALL,
     payload: {}
 }
 

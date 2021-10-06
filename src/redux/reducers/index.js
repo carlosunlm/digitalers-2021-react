@@ -3,7 +3,7 @@ import { combineReducers } from "redux";
 
 import counterReducer from "./counter/reducer";
 import userReducer from "./users/reducers";
-import articuloReducer from "./articulos/articuloReducer";
+import articuloReducer from "./articulos/reducer";
 import carritoReducer from "./carrito/reducer";
 import mensajeReducer from "./mensaje/reducer";
 

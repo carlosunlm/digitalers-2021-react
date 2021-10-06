@@ -23,6 +23,10 @@ export const carritoReducer = (state = {items:[]}, action) => {
             res.items = itemsFiltrados;
             break;
         }
+        case types.REMOVE_ALL:{
+            res.items = [];
+            break;
+        }
         case types.UPDATE:
             const itemFiltrados = res.items.find(item => item.id !== payload.item.id); //{item:,cantidad:}
             itemFiltrados.cantidad = payload.cantidad;

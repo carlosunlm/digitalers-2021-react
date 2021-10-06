@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { CarritoItemRow } from "./CarritoItemRow";
-import { CarritoTotal } from "./CarritoTotal";
+import { CarritoTotal } from "./CarritoTotalComponent";
 
-export default function Carritocomponent(props) {
+export default function Carritocomponent() {
     const carritoReducer = useSelector(
         (state) => state.carrito
     )

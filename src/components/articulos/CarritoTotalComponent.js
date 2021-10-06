@@ -16,7 +16,8 @@ export const CarritoTotal = () => {
                 <td className="text-right">
                     <strong>
                         {
-                            carritoReducer.items.reduce((x,y) => x + (y.item.precio * y.cantidad), 0)
+                            //[].reduce()
+                            carritoReducer.items.reduce( (x,y) => x + (y.item.precio * y.cantidad), 0)
                         }
                     </strong>
             </td>

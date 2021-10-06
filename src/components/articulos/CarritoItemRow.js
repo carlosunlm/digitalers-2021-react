@@ -7,12 +7,16 @@ export const CarritoItemRow = (props) => {
 
     const [cantidad,setCantidad] = useState(item.cantidad)
 
-    const carritoDispath = useDispatch();
+    const dispath = useDispatch();
 
     const updateCantidad = (newCantidad) => {
 
         if(newCantidad < 0) {
             newCantidad = 0;
+        }
+
+        if(newCantidad > 999) {
+            newCantidad = 999;
         }
 
         setCantidad(newCantidad);
@@ -24,12 +28,12 @@ export const CarritoItemRow = (props) => {
 			cantidad : newCantidad
 		}
 
-		carritoDispath(action);
+		dispath(action);
     }
 
     const eliminarItem = () => {
 
-        if(window.confirm('Eliminar Item?')) {
+        if(window.confirm('¿Eliminar Item?')) {
             let action = CARRITO_REMOVE;
 
             action.payload = {
@@ -37,7 +41,7 @@ export const CarritoItemRow = (props) => {
                 cantidad : 0
             }
 
-            carritoDispath(action);
+            dispath(action);
         }
     }
 
