@@ -10,6 +10,7 @@ import Carritocomponent from "./CarritoComponent";
 import MensajeriaComponent from "./MensajeriaComponent";
 import CheckoutComponent from "./CheckoutComponent";
 import CheckoutSuccessComponent from "./CheckoutSuccessComponent";
+import Profile from "../profile/Profile";
 
 export default function AppRouters() {
 
@@ -45,6 +46,9 @@ export default function AppRouters() {
                     <Route exact path="/carrito" component={Carritocomponent}/>
                     <Route exact path="/checkout" component={CheckoutComponent}/>
                     <Route exact path="/checkout-success/:id" component={CheckoutSuccessComponent}/>
+
+                    <Route exact path="/productos" component={ArticulosComponent}/>
+                    <Route exact path="/secure/profile" component={Profile}/>
                     <Route path="*" component={NotFoundComponent}/>
                 </Switch>
             </div>

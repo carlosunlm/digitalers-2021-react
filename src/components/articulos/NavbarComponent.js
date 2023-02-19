@@ -44,7 +44,7 @@ export default function NavbarComponent() {
                                 <NavLink activeClassName="active" className="nav-link" to="/productos">Productos</NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/secure/profile">Usuario</a>
+                                <NavLink activeClassName="active" className="nav-link" to="/secure/profile">Usuario</NavLink>
                             </li>
                         </ul>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
