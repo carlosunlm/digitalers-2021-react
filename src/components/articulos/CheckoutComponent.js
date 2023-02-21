@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
-import { CARRITO_REMOVE, CARRITO_REMOVE_ALL } from '../../redux/actions/carrito/actions';
+import { CARRITO_REMOVE_ALL } from '../../redux/actions/carrito/actions';
 
 export const CheckoutComponent = () => {
     

@@ -16,26 +16,27 @@ import OrdenDetail from "../secure/components/OrdenDetail";
 
 export default function AppRouters() {
 
-    
     const dispath = useDispatch();
-
+    
     //para cargar datos en un componentes la primera vez
     //uso useEffect
     useEffect( () => {
+        const findArticulos = () => {
+            //consulta a un api rest
+            fetch('/articulos.json')
+            .then(
+                (response) => response.json()
+                ).then((data) => {
+                    const newAdd = addAll;
+                    newAdd.payload = data
+                    dispath(addAll)
+                }).catch((error)=>{
+                    console.log(error);
+                });
+            }
         findArticulos();
-    }, []);
+    }, [dispath]);
 
-    const findArticulos = async () => {
-        //consulta a un api rest
-        await fetch(`articulos.json`)
-        .then(
-            (response) => response.json()
-        ).then((data) => {
-            const newAdd = addAll;
-            newAdd.payload = data
-            dispath(addAll)
-        });
-    }
     
     return (
         <BrowserRouter>

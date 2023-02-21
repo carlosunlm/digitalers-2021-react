@@ -15,22 +15,22 @@ function Ordenes() {
                     <div className="col-sm-12 col-lg-3">
                         <ProfileNavbar/>
                     </div>
-                    <div class="col-sm-12 col-lg-9">
-                            <div class="container">
-                                <div class="table-wrapper">
-                                    <div class="table-filter">
-                                        <div class="row">
-                                            <div class="col-5 col-sm-5 col-md-6 col-lg-6">
-                                                <div class="show-entries">
+                    <div className="col-sm-12 col-lg-9">
+                            <div className="container">
+                                <div className="table-wrapper">
+                                    <div className="table-filter">
+                                        <div className="row">
+                                            <div className="col-5 col-sm-5 col-md-6 col-lg-6">
+                                                <div className="show-entries">
                                                     <h2>Mis ordenes</h2>
                                                 </div>
                                             </div>
-                                            <div class="col">
-                                                <div class="input-group align-items-center space-arronud">
-                                                    <span class="filter-icon input-group-text">
-                                                        <i class="bi bi-funnel-fill"></i>
+                                            <div className="col">
+                                                <div className="input-group align-items-center space-arronud">
+                                                    <span className="filter-icon input-group-text">
+                                                        <i className="bi bi-funnel-fill"></i>
                                                     </span>
-                                                    <select class="form-select">
+                                                    <select className="form-select">
                                                         <option>Todas</option>
                                                         <option>pending</option>
                                                         <option>approved</option>
@@ -40,7 +40,7 @@ function Ordenes() {
                                             </div>
                                         </div>
                                     </div>
-                                    <table class="table table-striped table-hover">
+                                    <table className="table table-striped table-hover">
                                         <thead>
                                             <tr>
                                                 <th>Número</th>
@@ -58,7 +58,7 @@ function Ordenes() {
                                                 <td>Aug 19, 2016</td>
                                                 <td>
                                                     <Link to={'/secure/profile/orders/details/1'}>
-                                                        <i class="bi bi-arrow-right-circle-fill" style={{'font-size': '1.5rem', color: 'cornflowerblue'}}></i>
+                                                        <i className="bi bi-arrow-right-circle-fill" style={{'fontSize': '1.5rem', color: 'cornflowerblue'}}></i>
                                                     </Link>
                                                 </td>
                                             </tr>
@@ -68,11 +68,11 @@ function Ordenes() {
                                                 <td>110</td>
                                                 <td>Jul 19, 2016</td>
                                                 <td>
-                                                    <a class="view" 
+                                                    <a className="view" 
                                                         data-toggle="tooltip" 
                                                         title="View Details"
                                                         href="#/user/orders/details/2">
-                                                            <i class="bi bi-arrow-right-circle-fill" style={{'font-size': '1.5rem', color: 'cornflowerblue'}}></i>
+                                                            <i className="bi bi-arrow-right-circle-fill" style={{'fontSize': '1.5rem', color: 'cornflowerblue'}}></i>
                                                     </a>
                                                 </td>
                                             </tr>
@@ -82,11 +82,11 @@ function Ordenes() {
                                                 <td>120</td>
                                                 <td>Jun 19, 2016</td>
                                                 <td>
-                                                    <a class="view" 
+                                                    <a className="view" 
                                                         data-toggle="tooltip" 
                                                         title="View Details"
                                                         href="#/user/orders/details/3">
-                                                            <i class="bi bi-arrow-right-circle-fill" style={{'font-size': '1.5rem', color: 'cornflowerblue'}}></i>
+                                                            <i className="bi bi-arrow-right-circle-fill" style={{'fontSize': '1.5rem', color: 'cornflowerblue'}}></i>
                                                     </a>
                                                 </td>
                                             </tr>
@@ -96,11 +96,11 @@ function Ordenes() {
                                                 <td>120</td>
                                                 <td>Jun 19, 2016</td>
                                                 <td>
-                                                    <a class="view" 
+                                                    <a className="view" 
                                                         data-toggle="tooltip" 
                                                         title="View Details"
                                                         href="#/user/orders/details/4">
-                                                            <i class="bi bi-arrow-right-circle-fill" style={{'font-size': '1.5rem', color: 'cornflowerblue'}}></i>
+                                                            <i className="bi bi-arrow-right-circle-fill" style={{'fontSize': '1.5rem', color: 'cornflowerblue'}}></i>
                                                     </a>
                                                 </td>
                                             </tr>

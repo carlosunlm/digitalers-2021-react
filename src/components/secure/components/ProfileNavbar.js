@@ -12,18 +12,27 @@ function ProfileNavbar() {
                 </h2>
                 <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Datos Personales</a>
+                        <ul className="nav flex-column">
+                            <li className="nav-item">
+                                <Link className="nav-link active" 
+                                    aria-current="page"
+                                    to={'/secure/profile'}>
+                                    Datos Personales
+                                </Link>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Direcciones</a>
+                            <li className="nav-item">
+                                <Link className="nav-link" 
+                                    aria-current="page"
+                                    to={'/secure/profile'}>
+                                    Direcciones
+                                </Link>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Mis Tarjetas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Disabled</a>
+                            <li className="nav-item">
+                                <Link className="nav-link" 
+                                    aria-current="page"
+                                    to={'/secure/profile'}>
+                                    Mis Tarjetas
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -37,8 +46,8 @@ function ProfileNavbar() {
                 </h2>
                 <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
+                        <ul className="nav flex-column">
+                            <li className="nav-item">
                                 <Link to='/secure/profile/orders'  className='nav-link'>
                                     Ordenes
                                 </Link>
@@ -58,15 +67,15 @@ function ProfileNavbar() {
                         <div className="collapse show" role="tabpanel" id="static-2" aria-labelledby="static-2-header">
                             <form noValidate="">
                                 <div className="form-group">
-                                    <label for="name">Current password</label>
+                                    <label htmlFor="name">Current password</label>
                                     <input className="form-control input" type="text" />
                                 </div>
                                 <div className="form-group">
-                                    <label for="name">New password</label>
+                                    <label htmlFor="name">New password</label>
                                     <input className="form-control input" type="text" />
                                 </div>
                                 <div className="form-group">
-                                    <label for="name">Confirm New password</label>
+                                    <label htmlFor="name">Confirm New password</label>
                                     <input className="form-control input" type="text" />
                                 </div>
                                 <button className="btn btn-primary text-right"

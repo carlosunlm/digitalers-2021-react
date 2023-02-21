@@ -49,13 +49,16 @@ export const CarritoItemRow = (props) => {
         <>
             <tr>
                 <td>
-                    <img src="https://dummyimage.com/50x50/55595c/fff"/> 
+                    <img src="https://dummyimage.com/50x50/55595c/fff" alt='img'/> 
                 </td>
                 <td>
                     {item.item.titulo}
                 </td>
                 <td>
-                    <input className="form-control" type="number" value={cantidad} onChange={(e) => updateCantidad(e.target.value)}/>
+                    <input className="form-control" 
+                        type="number" 
+                        value={cantidad} 
+                        onChange={(e) => updateCantidad(e.target.value)}/>
                 </td>
                 <td className="text-right">
                     {item.item.precio}

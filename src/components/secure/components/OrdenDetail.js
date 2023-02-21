@@ -15,12 +15,12 @@ function OrdenDetail() {
                     <div className="col-sm-12 col-lg-3">
                         <ProfileNavbar />
                     </div>
-                    <div class="col-sm-12 col-lg-9">
-                        <div class="container">
-                            <div class="table-wrapper mt-3">
-                                <div class="row">
+                    <div className="col-sm-12 col-lg-9">
+                        <div className="container">
+                            <div className="table-wrapper mt-3">
+                                <div className="row">
                                     <h4 >Detalle de orden N° 1</h4>
-                                    <table class="table table-striped table-hover">
+                                    <table className="table table-striped table-hover">
                                         <thead >
                                             <tr >
                                                 <th >description</th>
@@ -35,7 +35,7 @@ function OrdenDetail() {
                                         </tbody>
                                     </table>
                                     <h4 >Dirección de entrega</h4>
-                                    <table class="table table-striped table-hover">
+                                    <table className="table table-striped table-hover">
                                         <thead >
                                             <tr >
                                                 <th >street</th>
@@ -54,7 +54,7 @@ function OrdenDetail() {
                                         </tbody>
                                     </table>
                                     <h4 >Medio de Pago</h4>
-                                    <table class="table table-striped table-hover">
+                                    <table className="table table-striped table-hover">
                                         <thead >
                                             <tr >
                                                 <th >description</th>
@@ -68,12 +68,12 @@ function OrdenDetail() {
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <table class="table">
+                                    <table className="table">
                                         <tbody >
                                             <tr >
                                                 <td>
                                                     <Link to={'/secure/profile/orders'}>
-                                                        <i class="bi bi-arrow-left-circle-fill" style={{'font-size': '1.5rem', color: 'cornflowerblue'}}></i>
+                                                        <i className="bi bi-arrow-left-circle-fill" style={{'fontSize': '1.5rem', color: 'cornflowerblue'}}></i>
                                                     </Link>
                                                 </td>
                                             </tr>

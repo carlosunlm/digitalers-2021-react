@@ -14,7 +14,7 @@ function Profile() {
                         <ProfileNavbar/>
                     </div>
                     <div className="col-sm-12 col-lg-9">
-                        <form noValidate="" role="form">
+                        <form>
                             <h3 >Personal info</h3>
                             <div className="row">
                                 <div className="col">

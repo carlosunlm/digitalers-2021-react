@@ -33,7 +33,7 @@ function Login (props) {
 						value={username}
                 		onChange={ event => setUsername(event.target.value)}
 						/>
-					<label for="exampleInputEmail1">Username</label> 
+					<label htmlFor="exampleInputEmail1">Username</label> 
 					</div>
 					<div className="form-outline mb-3">
 					<input 
@@ -43,7 +43,7 @@ function Login (props) {
 						placeholder="Enter password" id="exampleInputPassword1"
 						value={password}
                 		onChange={ event => setPassword(event.target.value)}/>
-					<label for="exampleInputPassword1">Password</label> 
+					<label htmlFor="exampleInputPassword1">Password</label> 
 					</div>
 					<div className="text-center text-lg-start mt-4 pt-2">
 						<button 
