@@ -18,14 +18,21 @@ export default function MensajeriaComponent() {
         (
             mensajeReducer.mensaje 
             ? 
-                <div className="row mt-0">
-                    <div className="alert alert-warning alert-dismissible fade show" role="alert">
+            <div className="container mt-1">
+                <div className="row">
+                    <div className="alert alert-info alert-dismissible fade show" role="alert">
                         <strong>
                             {mensajeReducer.mensaje}
                         </strong>
-                        <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick={()=>limpiar()}></button>
+                        <button type="button" 
+                            className="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Close" 
+                            onClick={()=>limpiar()}>
+                        </button>
                     </div>
                 </div>
+            </div>
             : 
             <></>
         )

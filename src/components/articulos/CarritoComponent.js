@@ -17,7 +17,7 @@ export default function Carritocomponent() {
                         <p>No hay productos en el carrito</p>
                         <hr/>
                         <p className="mb-0">
-                            <Link to="/" className="btn btn-info btn-md">
+                            <Link to="/" className="btn btn-primary btn-md">
                                 <i className="bi bi-cart"></i> 
                                 Continuar comprando 
                             </Link>

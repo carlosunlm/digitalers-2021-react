@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ChangePassword from './ChangePassword'
 
 function ProfileNavbar() {
     return (
@@ -65,24 +66,7 @@ function ProfileNavbar() {
                 <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
                         <div className="collapse show" role="tabpanel" id="static-2" aria-labelledby="static-2-header">
-                            <form noValidate="">
-                                <div className="form-group">
-                                    <label htmlFor="name">Current password</label>
-                                    <input className="form-control input" type="text" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="name">New password</label>
-                                    <input className="form-control input" type="text" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="name">Confirm New password</label>
-                                    <input className="form-control input" type="text" />
-                                </div>
-                                <button className="btn btn-primary text-right"
-                                    type="submit">
-                                    Change passowrd
-                                </button>
-                            </form>
+                            <ChangePassword></ChangePassword>
                         </div>
                     </div>
                 </div>

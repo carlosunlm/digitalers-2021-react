@@ -22,7 +22,7 @@ function Ordenes() {
                                         <div className="row">
                                             <div className="col-5 col-sm-5 col-md-6 col-lg-6">
                                                 <div className="show-entries">
-                                                    <h2>Mis ordenes</h2>
+                                                    <h2 className='text-primary'>Mis ordenes</h2>
                                                 </div>
                                             </div>
                                             <div className="col">

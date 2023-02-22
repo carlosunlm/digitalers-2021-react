@@ -18,7 +18,7 @@ export const CheckoutComponent = () => {
 	const [nombre,setNombre] = useState('');
 	const [apellido,setApellido] = useState('');
 	const [email,setEmail] = useState('');		
-	// const [medioPago,setMedioPago] = useState('');
+	const [medioPago,setMedioPago] = useState('');
 	const [cupon,setCupon] = useState('');
 
 	const isDisabled = () => {
@@ -73,7 +73,7 @@ export const CheckoutComponent = () => {
         <div className="row g-5 py-2">
 	      <div className="col-md-5 col-lg-4 order-md-last">
 	        <h4 className="d-flex justify-content-between align-items-center mb-3">
-	          <span className="text-primary">
+	          <span className="text-info">
 	          	Tu carrito
 	          </span>
 	          <span className="badge bg-primary rounded-pill">
@@ -114,7 +114,9 @@ export const CheckoutComponent = () => {
 	        </ul>
 	        <form className="card p-2">
 	          <div className="input-group">
-	            <input type="text" className="form-control" placeholder="Código Promoción"
+	            <input type="text" 
+					className="form-control" 
+					placeholder="Código Promoción"
 					value={cupon}
 					onChange={e => setCupon(e.target.value)}/>
 	            <button type="button" className="btn btn-secondary"
@@ -126,14 +128,21 @@ export const CheckoutComponent = () => {
 	        </form>
 	      </div>
 	      <div className="col-md-7 col-lg-8">
-	        <h4 className="mb-3">Dirección Facturación</h4>
+	        <h3 className="text-primary mb-3">
+				Datos Personales
+			</h3>
 	        <form className="needs-validation" onSubmit={e => handleSubmit(e)}>
-	          <div className="row g-3">
+	          <div className="row g-2">
 	            <div className="col-sm-6">
 	              <label htmlFor="firstName" className="form-label">
 	              	Nombre
 	              </label>
-	              <input name="NOMBRE" type="text" className="form-control" id="firstName" placeholder="" value={nombre} onChange={e => setNombre(e.target.value)} required=""/>
+	              <input type="text" 
+				  	className="form-control" 
+					id="firstName"
+					placeholder="carlos" 
+					value={nombre}
+					onChange={e => setNombre(e.target.value)} required=""/>
 	              <div className="invalid-feedback">
 	                requerido
 	              </div>
@@ -142,7 +151,13 @@ export const CheckoutComponent = () => {
 	              <label htmlFor="lastName" className="form-label">
 	              	Apellido
 	              </label>
-	              <input name="APELLIDO" type="text" className="form-control" id="lastName" placeholder="" value={apellido} onChange={e => setApellido(e.target.value)} required=""/>
+	              <input name="apellido"
+				  	type="text"
+					className="form-control"
+					id="lastName"
+					placeholder="lópez" 
+					value={apellido} 
+					onChange={e => setApellido(e.target.value)} required=""/>
 	              <div className="invalid-feedback">
 	                requerido
 	              </div>
@@ -161,11 +176,21 @@ export const CheckoutComponent = () => {
 	            </div>
 	            <div className="col-12">
 	              <label htmlFor="address" className="form-label">Dirección</label>
-	              <input name="DIRECCION" type="text" className="form-control" id="address" placeholder="Dirección completa" value={direccion} onChange={e => setDireccion(e.target.value)} required=""/>
+	              <input name="direccion" 
+				  	type="text" 
+					className="form-control" 
+					id="address" 
+					placeholder="Calle Altura" 
+					value={direccion} 
+					onChange={e => setDireccion(e.target.value)} required=""/>
 	              <div className="invalid-feedback">
 	                Ingrese dirección
 	              </div>
 	            </div>
+				<hr className="my-4"/>
+				<h3 className="text-primary mb-3">
+					Direccion Envío
+				</h3>
 	            <div className="col-md-5">
 	              <label htmlFor="country" className="form-label">
 	              	Pais
@@ -181,21 +206,33 @@ export const CheckoutComponent = () => {
 		                <option value="3">Brasil</option>
 	              </select>
 	              <div className="invalid-feedback">
-	                Seleccione pais válido
+	                Seleccione país válido
 	              </div>
 	            </div>
 	          </div>
-			  {/* 
 	          <hr className="my-4"/>
-	          <h4 className="mb-3">Pago</h4>
+	          <h4 className="mb-3 text-primary">Medio de Pago</h4>
 	          <div className="my-3">
                 <div className="form-check">
-                    <input name="MEDIO_PAGO" value={medioPago} onChange={e => setMedioPago(e.target.value)} type="radio" className="form-check-input ccCheckbox" required=""/>
+                    <input type="radio" 
+						name="medio_pago" 
+						className="form-check-input ccCheckbox" 
+						value={medioPago} 
+						required=""
+						onChange={e => setMedioPago('efectivo')} 
+						/>
                     <label className="form-check-label" htmlFor="credit">Efectivo</label>
+					<input type="radio" 
+						name="medio_pago" 
+						className="form-check-input ccCheckbox" 
+						value={medioPago} 
+						required=""
+						onChange={e => setMedioPago('tarjeta')} 
+						/>
+                    <label className="form-check-label" htmlFor="credit">Tarjeta</label>
                 </div>
 	          </div>
-			  */}
-			  {/*
+			  {
 	          <div className="row gy-3" id="ccRow">
 	            <div className="col-md-7">
 	              <label htmlFor="cc-name" className="form-label">Nombre en Tarjeta de Crédito</label>
@@ -227,7 +264,7 @@ export const CheckoutComponent = () => {
 	              </div>
 	            </div>
 	          </div>
-			  */}
+			  }
 	          <hr className="my-4"/>
 	          <button className="w-100 btn btn-primary btn-lg" type="submit" disabled={isDisabled()}>
 	          	Generar Orden

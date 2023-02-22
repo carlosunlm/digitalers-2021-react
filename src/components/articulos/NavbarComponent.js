@@ -49,7 +49,7 @@ export default function NavbarComponent() {
                         </ul>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li>
-                                <Link to="/carrito" className="btn btn-info position-relative">
+                                <Link to="/carrito" className="btn btn-primary position-relative">
                                     Carrito
                                 </Link>
                             </li>

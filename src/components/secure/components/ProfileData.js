@@ -2,8 +2,8 @@ import React from 'react'
 
 function ProfileData() {
     return (
-        <form noValidate="" role="form">
-            <h3 >Personal info</h3>
+        <form>
+            <h3 className='text-primary'>Personal info</h3>
             <div className="row">
                 <div className="col">
                     <div className="form-group">
@@ -20,19 +20,19 @@ function ProfileData() {
                     </div>
                 </div>
             </div>
-            <h3 >Address Info</h3>
+            <h3 className='text-primary'>Address Info</h3>
             <div className="row">
                 <div className="col">
                     <div className="form-group">
                         <label htmlFor="name">Pais</label>
-                        <select className="form-control">
+                        <select className="form-select">
                             <option >ARGENTINA</option>
                             <option >URUGUAY</option>
                         </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="name">Provincia</label>
-                        <select>
+                        <select className="form-select">
                             <option>MISIONES</option>
                             <option>BUENOS AIRES</option>
                         </select>
