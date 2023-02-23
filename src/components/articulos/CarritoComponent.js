@@ -54,14 +54,16 @@ export default function Carritocomponent() {
                     </tbody>
                 </table>
             </div>
-            <div className="row text-center">
+            <div className="row">
                 <div className="col-6">
                     <Link to="/" className="btn btn-block btn-secondary text-uppercase" tabIndex="0">
                         Continue Shopping
                     </Link>
                 </div>
                 <div className="col-6">
-                    <Link to="/checkout" className="btn btn-block btn-success text-uppercase" tabIndex="1">
+                    <Link to="/checkout" 
+                        className="btn btn-block btn-success text-uppercase w-100" 
+                        tabIndex="1">
                         Checkout
                     </Link>
                 </div>
@@ -71,12 +73,10 @@ export default function Carritocomponent() {
     }
     return (
         <>
-        <div className="row">
             <h3>Carrito de compras</h3>
             {                
                 carritoReducer.items.length === 0 ? dibujarCarritoVacio() : dibujarCarrito()
             }
-        </div>
         </>
     )
 }

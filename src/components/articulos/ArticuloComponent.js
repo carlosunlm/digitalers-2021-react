@@ -7,7 +7,7 @@ export default function ArticuloComponent(props) {
 
     return (
         <>
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xxl-2">
+            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xxl-2 p-1">
                 <div className="card h-100">
                     <img src="/assets/images/ceramica.jpg" className="card-img-top" alt="ceramica" />
                     <div className="card-body">

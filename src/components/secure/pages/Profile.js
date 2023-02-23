@@ -4,7 +4,7 @@ import ProfileNavbar from "../components/ProfileNavbar";
 function Profile() {
     return (
         <>
-            <section className="text-center">
+            <section className="text-center mb-5">
                 <div className="container">
                     <h1>E-COMMERCE PROFILE</h1>
                 </div>

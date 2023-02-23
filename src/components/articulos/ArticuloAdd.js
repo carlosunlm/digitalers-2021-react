@@ -65,33 +65,35 @@ export const ArticuloAdd = (props) => {
 	}
 
     return (
-        <div className="input-group mb-3 justify-content-center">
-            <div className="col-auto">
-                <button className="btn btn-warning" type="button"
-                    onClick={() => decrement()}
-                    disabled={cantidad===0}>
-                        <i className="bi bi-cart-dash"></i>
-                </button>
-            </div>
-            <div className="col">
-                <label htmlFor="cantidad" className="visually-hidden">Cantidad</label>
-                <input type="text" className="form-control" placeholder="cantidad" aria-label="" aria-describedby="btnAdd"
-                    min="0" max="999"
-                    value={cantidad}
-                    onChange={(e) => setCantidad(e.target.value)} />
-            </div>
-            <div className="col-auto">
-                <button type="button" className="btn btn-success mb-3 btnAdd"
-                    onClick={() => increment()}>
-                    <i className="bi bi-cart-plus"></i>
-                </button>
-            </div>
-            <button type="button" className="btn btn-primary w-100" 
-                onClick={()=>submitHandler()}
-                disabled={cantidad === 0 || cantidad >= 999}>
-                <i className="bi bi-cart-plus"></i>
-                Agregar
-            </button>
-        </div>
+		<>
+			<div className="input-group pb-1 justify-content-center">
+				<div className="col-auto">
+					<button className="btn btn-warning" type="button"
+						onClick={() => decrement()}
+						disabled={cantidad===0}>
+							<i className="bi bi-cart-dash"></i>
+					</button>
+				</div>
+				<div className="col">
+					<label htmlFor="cantidad" className="visually-hidden">Cantidad</label>
+					<input type="text" className="form-control" placeholder="cantidad" aria-label="" aria-describedby="btnAdd"
+						min="0" max="999"
+						value={cantidad}
+						onChange={(e) => setCantidad(e.target.value)} />
+				</div>
+				<div className="col-auto">
+					<button type="button" className="btn btn-success btnAdd"
+						onClick={() => increment()}>
+						<i className="bi bi-cart-plus"></i>
+					</button>
+				</div>
+			</div>
+			<button type="button" className="btn btn-primary w-100" 
+				onClick={()=>submitHandler()}
+				disabled={cantidad === 0 || cantidad >= 999}>
+				<i className="bi bi-cart-plus"></i>
+				Agregar
+			</button>
+		</>
     )
 }

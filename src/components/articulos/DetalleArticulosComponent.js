@@ -24,7 +24,7 @@ export default function DetallearticulosComponent() {
 			<div className="col-12">
 				<h3>Detalle de articulo</h3>			
 				<div className="card mb-3">
-				  <div className="row g-0">
+				  <div className="row align-items-center p-1">
 				    <div className="col-md-5">
 				      <img src="/assets/images/ceramica.jpg" className="img-fluid rounded-start" alt="ceramica"/>
 				    </div>
